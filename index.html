@@ -1,112 +1,113 @@
 <!DOCTYPE html>
-<!-- saved from url=(0078)3rdPage/3 -->
-<html xmlns="http://www.w3.org/1999/xhtml" class="fp-enabled" style="overflow: hidden; height: 100%;">
+<html lang="en">
 
 <head>
-<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>Create Fullscreen One Page Scrolling Horizontally Websites With - fullPage.js | jQuery Plugins | jQuery Post</title>
-
-	<link rel="stylesheet" type="text/css" href="scroll-h/fullpage.min.css">
-	<link rel="stylesheet" type="text/css" href="scroll-h/examples.css">
-	<script type="text/javascript" src="scroll-h/jquery.js"></script>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
+    <meta charset="UTF-8">
+    <title>CodePen - Horizontal Scrolling with mouse wheel</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- partial:index.partial.html -->
+    <html>
 
-<div id="myContainer">
-    
-    <div class="section active" id="section0">
-        <h1>Section 1</h1>
-    </div>
+    <body class="wrapper">
+        <nav class="navlink">
+            <ul>
+                <li class="logo"><img src="img/logo.svg"></li>
+                <li>展覽概述</li>
+                <li>豎畫三寸</li>
+                <li>千仞山高</li>
+                <li>廬山行旅</li>
+                <li>影音特展</li>
+            </ul>
+        </nav>
+        <div id="main" class="site-main">
+            <h4 class="scrollbaby"><img src="img/mouse.png" style="width: 20px; vertical-align: middle;"> Scroll Mouse Wheel~</h4>
 
 
-    <div class="section" id="section1">
+            <div id="main-content" class="main-content">
+                <!--
 
-        <div class="slide" id="slide1">
-            <div class="intro">
-                <h1>Slide 2.1</h1>
-                
+	-->
+                <div id="post-1" class="post-1 post-first type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print">
+                    <h1>豎畫三寸千仞山高</h1>
+                    <p>凡畫人，坐時可七分，衣服色彩殊鮮微，此正蓋山高而人遠耳。 ... 今張綃素以遠映，則昆閬之形可圍於方寸之內，豎劃三寸當千仞之高，橫墨數尺體百里之迥</p>
+                    <p class="title">廬山行旅</p>
+                </div>
+
+
+                <!--
+
+	-->
+                <div id="post-2" class="post-2 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print">
+                    <div class="postimg"  style="background-image: url(img/s001.jpg);">
+                        <div class="postCon">
+                            <h3><a href="index-scroll.html">五代梁荊浩匡廬圖</a></h3>
+                            <p>五代後梁荊浩的作品，一般認為是北宋畫院畫家對荊浩的仿古作品</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!--
+
+	-->
+                <div  id="post-3" class="post-3 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id ">
+                    <div class="postimg"  style="background-image: url(img/s005.jpg);">
+                        <div class="postCon">
+                            <h3>五代梁荊浩匡廬圖</h3>
+                            <p>五代後梁荊浩的作品，一般認為是北宋畫院畫家對荊浩的仿古作品</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="post-4" class="post-4 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id ">
+                    <div class="postimg"  style="background-image: url(img/s003.jpg);">
+                        <div class="postCon">
+                            <h3>五代梁荊浩匡廬圖</h3>
+                            <p>五代後梁荊浩的作品，一般認為是北宋畫院畫家對荊浩的仿古作品</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--
+
+	-->
+                <div id="post-5" class="post-5 post type-post status-publish format-standard has-post-thumbnail hentry category-branding-id category-print tag-adobe tag-adobe-photoshop tag-branding tag-business-cards tag-graphic-design tag-id tag-identity tag-print">
+                    <div class="postimg"  style="background-image: url(img/s004.jpg);">
+                        <div class="postCon">
+                            <h3>五代梁荊浩匡廬圖</h3>
+                            <p>五代後梁荊浩的作品，一般認為是北宋畫院畫家對荊浩的仿古作品</p>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+
+
+
+                <!--
+	-->
+
             </div>
+            <!-- #main-content -->
+
+
         </div>
 
-        <div class="slide" id="slide2">
-            <div class="intro">
-                <h1>Slide 2.2</h1>
-                <p>
-                    We are using the class `active` on this section and in this particular horizontal slide. This way it will appear on the viewport on page load, instead of the 1st section 1st slide.
-                </p>
-                <p>You can apply the same logic to horizontal slides</p>
-            </div>
-        </div>
+    </body>
 
-        <div class="slide" id="slide3">
-            <h1>Slide 2.3</h1>
-        </div>
-
-       <!--  <div class="owl-carousel owl-theme">
-		    <div>0</div>
-		    <div>1</div>
-		    <div>2</div>
-		    <div>3</div>
-		
-		</div>
- -->
-    </div>
-
-
-    <div class="section" id="section2">
-        <div class="intro">
-            <h1>Section 3</h1>
-        </div>
-    </div>
-</div>
-
-
-
-<script type="text/javascript" src="scroll-h/fullpage.scrollHorizontally.min.js"></script>
-
-<script type="text/javascript" src="scroll-h/fullpage.extensions.min.js"></script>
-
-<script type="text/javascript">
-
-jQuery(function($) {
-
-	$('#myContainer').fullpage({
-		sectionsColor: ['#ff73a1', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#ccc'],
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
-		menu: '#menu',
-		slidesNavigation: true,
-		scrollHorizontally: true,
-		//scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
-		afterSlideLoad: function(section, origin, destination, direction){
-			console.log({
-				section: section,
-				origin: origin,
-				destination: destination,
-				direction: direction
-			});
-		},
-		onSlideLeave: function(section, origin, destination, direction){
-			console.log({
-				section: section,
-				origin: origin,
-				destination: destination,
-				direction: direction
-			});
-		}
-	});
-
-	});
-</script>
-
+    </html>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
+    <script src="./script.js"></script>
 
 </body>
+
 </html>

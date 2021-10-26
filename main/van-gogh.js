@@ -8907,7 +8907,7 @@ var StoryBaseModule = function() {
             return e
         }, t.prototype.loadSection = function(t) {
             var e = t;
-            return e.$backdrop = $('<div class="backdrop"></div>'), t.backgroundImageUrl && (e.$backdrop.addClass("has-image"), e.$backdrop.css("background-image", "url(" + t.backgroundImageUrl + "=s1600)")), e
+            return e.$backdrop = $('<div class="backdrop"></div>'), t.backgroundImageUrl && (e.$backdrop.addClass("has-image"), e.$backdrop.css("background-image", "url(" + t.backgroundImageUrl + ")")), e
         }, t.prototype.catchKeyDown = function(t) {
             if (this.active) switch (t.which) {
                 case 37:
@@ -9093,14 +9093,13 @@ var StoryBaseModule = function() {
         "use strict";
 
         function e(e, i) {
-            t.apply(this, arguments), _.bindAll(this, "showMoreContent", "startStory"), this.states = 2, this.$panel.addClass("module-intro active"), this.module.imageUrl && this.$panel.css("background-image", "url(" + this.module.imageUrl + "=s1600)");
+            t.apply(this, arguments), _.bindAll(this, "showMoreContent", "startStory"), this.states = 2, this.$panel.addClass("module-intro active");
             var n = $(".story-page-header", ".story");
             n.length > 0 && n.clone(!0).appendTo(this.$panel), this.$unit = $('<div class="base-layout"></div>').appendTo(this.$panel), $('<h1 class="hr-accent reset-top">' + this.module.title + "</h1>").appendTo(this.$unit), $('<p class="h1 text-normal">' + this.module.subtitle + "</p>").appendTo(this.$unit), this.$teaser = $('<div class="teaser absolute reset-margin-all"></div>').appendTo(this.$unit), this.module.teaser && (this.$teaserText = $('<p class="text-intro text-normal">' + this.module.teaser + "</p>").appendTo(this.$teaser));
             var s = window.vanGogh.story.storyData.storyButtonLabel || window.vanGogh.translations.storyButtonLabel,
                 a = window.vanGogh.story.storyData.storyUrl;
             this.$storyButtonLink = $('<a href="' + a + '">' + s + "</a>").appendTo(this.$teaser), this.$storyButtonLink.attr("data-role", "story-button").addClass("button light"), this.$storyButtonLink.on("click", this.startStory), $('<p class="description text-intro">' + this.module.text + "</p>").appendTo(this.$unit);
             var o = $('<div class="backdrop"></div>').appendTo(this.$panel);
-            this.module.blurredImageUrl && o.css("background-image", "url( this.module.blurredImageUrl )")
         }
         return __extends(e, t), e.prototype.showMoreContent = function(t) {
             if (!this.hasMoreContent(t)) return !1;
@@ -9132,7 +9131,7 @@ var StoryBaseModule = function() {
             t.apply(this, arguments);
             var n = $(window).height();
             this.$widget.addClass("widget-full-width-image"), this.$imageHolder = $('<div class="full-width-image-holder"></div>').appendTo(this.$widget), this.$imageHolder.css({
-                backgroundImage: "url(" + this.widget.imageUrl + "=s1600)",
+                backgroundImage: "url(" + this.widget.imageUrl + ")",
                 height: n + "px"
             })
         }
@@ -9230,7 +9229,7 @@ var StoryBaseModule = function() {
         "use strict";
 
         function e(e, i) {
-            t.apply(this, arguments), _.bindAll(this, "toggleLetter", "holdScroll", "togglePopup"), this.$widget.addClass("widget-letter"), this.$letterHolder = $('<div class="letter-holder"></div>').appendTo(this.$widget), this.$letterHolder.on("wheel mousewheel DOMMouseScroll touchstart touchmove", this.holdScroll), this.$buttonHolder = $('<div class="button-holder"></div>').appendTo(this.$widget), this.$button = $('<a href="">' + this.widget.buttonTextOpen + "</a>").appendTo(this.$buttonHolder), this.$button.addClass("button icon-zoom-in icon-label icon-before"), this.$button.on("click", this.toggleLetter), (this.widget.popupTitle || this.widget.popupTextHtml) && (this.$popupHolder = $('<div class="popup-holder"></div>').appendTo(this.$letterHolder), this.$popupToggle = $('<button class="popup-toggle button icon-only icon-letter-info"></button>').appendTo(this.$popupHolder), this.$popupContent = $('<div class="popup-content"></div>').appendTo(this.$popupHolder), this.$popupContent.append($('<div class="arrow"></div>')), this.$popupTextHolder = $('<div class="text-holder"></div>').appendTo(this.$popupContent), this.$popupTextHolder.append($('<p class="text-intro text-bold">' + this.widget.popupTitle + "</p>")), this.$popupTextHolder.append($(this.widget.popupTextHtml).addClass("text-dark")), this.$popupToggle.on("click", this.togglePopup)), this.widget.imageUrl && $('<img class="letter" src="' + this.widget.imageUrl + '=s1600">').appendTo(this.$letterHolder)
+            t.apply(this, arguments), _.bindAll(this, "toggleLetter", "holdScroll", "togglePopup"), this.$widget.addClass("widget-letter"), this.$letterHolder = $('<div class="letter-holder"></div>').appendTo(this.$widget), this.$letterHolder.on("wheel mousewheel DOMMouseScroll touchstart touchmove", this.holdScroll), this.$buttonHolder = $('<div class="button-holder"></div>').appendTo(this.$widget), this.$button = $('<a href="">' + this.widget.buttonTextOpen + "</a>").appendTo(this.$buttonHolder), this.$button.addClass("button icon-zoom-in icon-label icon-before"), this.$button.on("click", this.toggleLetter), (this.widget.popupTitle || this.widget.popupTextHtml) && (this.$popupHolder = $('<div class="popup-holder"></div>').appendTo(this.$letterHolder), this.$popupToggle = $('<button class="popup-toggle button icon-only icon-letter-info"></button>').appendTo(this.$popupHolder), this.$popupContent = $('<div class="popup-content"></div>').appendTo(this.$popupHolder), this.$popupContent.append($('<div class="arrow"></div>')), this.$popupTextHolder = $('<div class="text-holder"></div>').appendTo(this.$popupContent), this.$popupTextHolder.append($('<p class="text-intro text-bold">' + this.widget.popupTitle + "</p>")), this.$popupTextHolder.append($(this.widget.popupTextHtml).addClass("text-dark")), this.$popupToggle.on("click", this.togglePopup)), this.widget.imageUrl && $('<img class="letter" src="' + this.widget.imageUrl + '">').appendTo(this.$letterHolder)
         }
         return __extends(e, t), e.prototype.toggleLetter = function(t) {
             if (t.preventDefault(), this.$widget.hasClass("open")) this.$letterHolder.animate({
@@ -9275,7 +9274,7 @@ var StoryBaseModule = function() {
         "use strict";
 
         function e(e, i) {
-            t.apply(this, arguments), _.bindAll(this, "showMoreContent", "showSlideshow", "hideSlideshow", "removeSlideshow", "loadSlides", "loadSlide", "previousSlide", "nextSlide"), this.slides = [], this.slide = 0, this.$widget.addClass("widget-slideshow"), this.$buttonHolder = $('<div class="button-holder"></div>').appendTo(this.$imageFrame), this.$button = $('<a href="">' + this.widget.buttonText + "</a>").appendTo(this.$buttonHolder), this.$button.addClass("button icon-plus icon-label icon-before"), this.$button.on("click", this.showSlideshow), this.$slideshow = $('<div class="slideshow"></div>').appendTo(this.$widget), this.widget.backgroundImageUrl && this.$slideshow.css("background-image", "url(" + this.widget.backgroundImageUrl + "=s1600)"), this.$slideHolder = $('<div class="slide-holder"></div>').appendTo(this.$slideshow), this.$slideshowCloseButton = $('<a href=""></a>').appendTo(this.$slideshow), this.$slideshowCloseButton.addClass("button large light icon-close icon-only"), this.$slideshowCloseButton.on("click", this.hideSlideshow);
+            t.apply(this, arguments), _.bindAll(this, "showMoreContent", "showSlideshow", "hideSlideshow", "removeSlideshow", "loadSlides", "loadSlide", "previousSlide", "nextSlide"), this.slides = [], this.slide = 0, this.$widget.addClass("widget-slideshow"), this.$buttonHolder = $('<div class="button-holder"></div>').appendTo(this.$imageFrame), this.$button = $('<a href="">' + this.widget.buttonText + "</a>").appendTo(this.$buttonHolder), this.$button.addClass("button icon-plus bi bi-plus icon-label icon-before"), this.$button.on("click", this.showSlideshow), this.$slideshow = $('<div class="slideshow"></div>').appendTo(this.$widget), this.widget.backgroundImageUrl && this.$slideshow.css("background-image", "url(" + this.widget.backgroundImageUrl + ")"), this.$slideHolder = $('<div class="slide-holder"></div>').appendTo(this.$slideshow), this.$slideshowCloseButton = $('<a href=""></a>').appendTo(this.$slideshow), this.$slideshowCloseButton.addClass("button  light icon-close icon-only bi bi-x"), this.$slideshowCloseButton.on("click", this.hideSlideshow);
             var n = "button huge square translucent dark dark-hover icon-only";
             this.$slideshowNextButton = $('<a href=""></a>').appendTo(this.$slideshow), this.$slideshowNextButton.addClass(n + " icon-arrow-right"), this.$slideshowNextButton.on("click", this.nextSlide), this.$slideshowPreviousButton = $('<a href=""></a>').appendTo(this.$slideshow), this.$slideshowPreviousButton.addClass(n + " icon-arrow-left"), this.$slideshowPreviousButton.on("click", this.previousSlide)
         }
@@ -9365,7 +9364,7 @@ var StoryBaseModule = function() {
                 var e = $('<img alt=""' + (t.isTransparent ? 'class="no-border"' : "") + 'src="' + (t.imageUrl || t.artObjectImageUrl) + '=s600">');
                 if (this.$images = this.$images.add(e), e.appendTo(this.$imageFrame), t.artObject) {
                     t.caption = t.artObject.principalCreator + ", <em>" + t.artObject.title + "</em>, " + t.artObject.productionDateShortDisplay;
-                    $('<a href="' + t.artObject.url + '" class="button dark icon-zoom-in icon-only"><span class="visually-hidden">' + t.artObject.title + "</span></a>").appendTo(this.$imageFrame)
+                    $('<a href="#" class="button dark icon-zoom-in icon-only"><span class="visually-hidden">' + t.artObject.title + "</span></a>").appendTo(this.$imageFrame)
                 }
                 if (t.caption) {
                     var i = $('<figcaption class="caption">' + t.caption + "</figcaption>").appendTo(this.$imageGroup);
@@ -9392,8 +9391,7 @@ var StoryBaseModule = function() {
             !this.slide.imageUrl && !this.slide.artObjectImageUrl || this.slide.isQuote || this.renderImage(), (this.slide.title || this.slide.text) && this.renderText()
         }, e.prototype.renderImage = function() {
             this.$unit.addClass("has-image"), this.$imageHolder = $('<div class="image-holder"></div>').appendTo(this.$unit), this.$imageFrame = $('<div class="image-frame"></div>').appendTo(this.$imageHolder), this.$image = $('<img src="' + (this.slide.imageUrl || this.slide.artObjectImageUrl) + '=s1000">').appendTo(this.$imageFrame), (this.slide.isTransparent || !this.slide.title && !this.slide.text) && this.$image.addClass("no-border"), this.slide.overlayText && $('<p class="overlay-text">' + this.slide.overlayText + "</p>").appendTo(this.$imageFrame);
-            var t = null;
-            this.slide.artObject ? (t = this.slide.artObject.principalCreator + ", <em>" + this.slide.artObject.title + "</em>, " + this.slide.artObject.productionDateShortDisplay, this.$buttonHolder = $('<div class="button-holder"></div>').appendTo(this.$imageFrame), this.$button = $('<a href="' + this.slide.artObject.url + '" class="button"></a>').appendTo(this.$buttonHolder), this.slide.title || this.slide.text ? (this.$buttonHolder.addClass("left"), this.$button.addClass("dark icon-zoom-in icon-only")) : this.$button.html(window.vanGogh.translations.artObjectButtonText)) : this.slide.caption && (t = this.slide.caption), t && (this.$caption = $('<p class="caption">' + t + "</p>").appendTo(this.$imageHolder)), this.slide.switchImageUrl && (this.$switchImage = $('<div class="switch-image"></div>').appendTo(this.$imageFrame), this.$switchImage.css("background-image", "url(" + this.slide.switchImageUrl + "=s1000)"), this.$buttonHolder = $('<div class="button-holder"></div>').appendTo(this.$imageFrame), this.$button = $('<a href="">' + this.slide.buttonTextDefault + "</a>").appendTo(this.$buttonHolder), this.$button.addClass("button icon-zoom-in icon-label icon-before"), this.$button.on("click", this.switchImage))
+            
         }, e.prototype.renderText = function() {
             var t;
             if (this.$textHolder = $('<div class="text-holder"></div>').appendTo(this.$unit), this.slide.isQuote ? this.$unit.addClass("has-quote") : (this.$unit.addClass("has-text"), this.slide.title && (t = $('<h1 class="hr-accent">' + this.slide.title + "</h1>").appendTo(this.$textHolder))), this.slide.text) {

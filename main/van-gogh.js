@@ -8276,7 +8276,7 @@ var StoryBaseModule = function() {
         "use strict";
 
         function e(e, i) {
-            t.apply(this, arguments), _.bindAll(this, "hasMoreContent", "showMoreContent", "setImageOffset", "setInitialPosition", "setTargetPosition", "catchClick"), this.visible = !1, this.$widget.addClass("widget-sliding"), this.$imageHolder = $('<div class="image-holder ' + this.widget.position + '"></div>').appendTo(this.$widget), this.$imageFrame = $('<div class="image-frame"></div>').appendTo(this.$imageHolder), this.$imageFrame.on("click", this.catchClick), this.widget.size && this.$imageFrame.addClass(this.widget.size), this.widget.imageUrl && (this.$image = $('<img class="image" src="' + this.widget.imageUrl + '=s1000">').appendTo(this.$imageFrame), this.widget.isTransparent && this.$image.addClass("no-border")), PointerEventsPolyfill.initialize({
+            t.apply(this, arguments), _.bindAll(this, "hasMoreContent", "showMoreContent", "setImageOffset", "setInitialPosition", "setTargetPosition", "catchClick"), this.visible = !1, this.$widget.addClass("widget-sliding"), this.$imageHolder = $('<div class="image-holder ' + this.widget.position + '"></div>').appendTo(this.$widget), this.$imageFrame = $('<div class="image-frame"></div>').appendTo(this.$imageHolder), this.$imageFrame.on("click", this.catchClick), this.widget.size && this.$imageFrame.addClass(this.widget.size), this.widget.imageUrl && (this.$image = $('<img class="image" src="' + this.widget.imageUrl + '">').appendTo(this.$imageFrame), this.widget.isTransparent && this.$image.addClass("no-border")), PointerEventsPolyfill.initialize({
                 selector: ".image-holder",
                 mouseEvents: ["click", "hover"]
             }), this.setImageOffset(), this.setInitialPosition()
@@ -9390,7 +9390,7 @@ var StoryBaseModule = function() {
         return __extends(e, t), e.prototype.render = function() {
             !this.slide.imageUrl && !this.slide.artObjectImageUrl || this.slide.isQuote || this.renderImage(), (this.slide.title || this.slide.text) && this.renderText()
         }, e.prototype.renderImage = function() {
-            this.$unit.addClass("has-image"), this.$imageHolder = $('<div class="image-holder"></div>').appendTo(this.$unit), this.$imageFrame = $('<div class="image-frame"></div>').appendTo(this.$imageHolder), this.$image = $('<img src="' + (this.slide.imageUrl || this.slide.artObjectImageUrl) + '=s1000">').appendTo(this.$imageFrame), (this.slide.isTransparent || !this.slide.title && !this.slide.text) && this.$image.addClass("no-border"), this.slide.overlayText && $('<p class="overlay-text">' + this.slide.overlayText + "</p>").appendTo(this.$imageFrame);
+            this.$unit.addClass("has-image"), this.$imageHolder = $('<div class="image-holder"></div>').appendTo(this.$unit), this.$imageFrame = $('<div class="image-frame"></div>').appendTo(this.$imageHolder), this.$image = $('<img src="' + (this.slide.imageUrl || this.slide.artObjectImageUrl) + '">').appendTo(this.$imageFrame), (this.slide.isTransparent || !this.slide.title && !this.slide.text) && this.$image.addClass("no-border"), this.slide.overlayText && $('<p class="overlay-text">' + this.slide.overlayText + "</p>").appendTo(this.$imageFrame);
             
         }, e.prototype.renderText = function() {
             var t;

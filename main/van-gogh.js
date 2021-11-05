@@ -9098,7 +9098,7 @@ var StoryBaseModule = function() {
             n.length > 0 && n.clone(!0).appendTo(this.$panel), this.$unit = $('<div class="base-layout"></div>').appendTo(this.$panel), $('<h1 class="hr-accent reset-top">' + this.module.title + "</h1>").appendTo(this.$unit), $('<p class="h1 text-normal">' + this.module.subtitle + "</p>").appendTo(this.$unit), this.$teaser = $('<div class="teaser absolute reset-margin-all"></div>').appendTo(this.$unit), this.module.teaser && (this.$teaserText = $('<p class="text-intro text-normal">' + this.module.teaser + "</p>").appendTo(this.$teaser));
             var s = window.vanGogh.story.storyData.storyButtonLabel || window.vanGogh.translations.storyButtonLabel,
                 a = window.vanGogh.story.storyData.storyUrl;
-            this.$storyButtonLink = $('<a href="' + a + '">' + s + "</a>").appendTo(this.$teaser), this.$storyButtonLink.attr("data-role", "story-button").addClass("button light"), this.$storyButtonLink.on("click", this.startStory), $('<p class="description text-intro">' + this.module.text + "</p>").appendTo(this.$unit);
+            this.$storyButtonLink = $('<a href="' + a + '">' + s + "</a>").appendTo(this.$teaser),  $('<p class="description text-intro">' + this.module.text + "</p>").appendTo(this.$unit);
             var o = $('<div class="backdrop"></div>').appendTo(this.$panel);
         }
         return __extends(e, t), e.prototype.showMoreContent = function(t) {
@@ -9221,7 +9221,7 @@ var StoryBaseModule = function() {
             }
             if ($('<div class="arrow"></div>').appendTo(n), t.title || t.text) {
                 var a = $('<div class="text-holder text-dark"></div>');
-                a.appendTo(n), t.title && $('<p class="text-intro text-bold">' + t.title + "</p>").appendTo(a), t.text && $('<p class="description">' + t.text + "</p>").appendTo(a)
+                a.appendTo(n), t.title && $('<p class="text-intro text-bold">' + t.title + "</p>").appendTo(a), t.text && $('<p class="">' + t.text + "</p>").appendTo(a)
             }
         }, e
     }(StoryBaseSlidingWidget),

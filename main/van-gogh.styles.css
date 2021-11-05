@@ -11904,7 +11904,6 @@ li:before,
   margin-top: 5%;
 }
 .story .module-text > .base-layout > * {
-  max-width: 31.25rem;
 }
 .story .widget .base-layout {
   max-width: 75rem;
@@ -12065,10 +12064,10 @@ li:before,
   backface-visibility: hidden;
 }
 .panel .quote {
-  font-size: 2.5rem;
-  line-height: 3.33333rem;
-  font-style: italic;
-  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  padding: 0 20px;
+  text-align: left;
 }
 .panel .quote p:before {
   content: open-quote;
